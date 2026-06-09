@@ -1,1 +1,0 @@
-Final portfolio fix: removed unwanted third-party presentation wording and removed broken project image entries. No design, animation, component structure, or portfolio functionality was intentionally changed.

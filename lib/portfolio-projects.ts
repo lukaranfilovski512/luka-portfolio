@@ -875,7 +875,7 @@ export const portfolioProjects = [
         "h": 1350
       }
     ],
-    "count": 6
+    "count": 4
   },
   {
     "slug": "marija-spasovska-singer",
@@ -1499,7 +1499,7 @@ export const portfolioProjects = [
         "h": 1350
       }
     ],
-    "count": 6
+    "count": 4
   },
   {
     "slug": "service-milosheski-social-media",
@@ -1663,7 +1663,7 @@ export const portfolioProjects = [
         "h": 1350
       }
     ],
-    "count": 6
+    "count": 4
   },
   {
     "slug": "tedy-max-trans-social-media",
@@ -1875,7 +1875,7 @@ export const portfolioProjects = [
         "h": 1350
       }
     ],
-    "count": 6
+    "count": 4
   },
   {
     "slug": "ac-milan-logo-concept",
@@ -2034,18 +2034,8 @@ export const portfolioProjects = [
         "w": 1920,
         "h": 1080
       },
-      {
-        "src": "/portfolio/sky-city-deluxe-logo-design/sky-city-deluxe-logo-design-05.heic",
-        "w": 640,
-        "h": 800
-      },
-      {
-        "src": "/portfolio/sky-city-deluxe-logo-design/sky-city-deluxe-logo-design-06.heic",
-        "w": 640,
-        "h": 800
-      }
     ],
-    "count": 6
+    "count": 4
   },
   {
     "slug": "court-kingz-custom-poster",

@@ -238,7 +238,7 @@ function ProjectCard({ project, index, onOpen }: { project: PortfolioProject; in
 }
 
 function ProjectModal({ project, onClose }: { project: PortfolioProject; onClose: () => void }) {
-  const fullPresentationStyle = isPremiumStyleProject(project)
+  const premiumPresentationStyle = isPremiumStyleProject(project)
 
   return (
     <motion.div
@@ -259,7 +259,7 @@ function ProjectModal({ project, onClose }: { project: PortfolioProject; onClose
         onClick={(event) => event.stopPropagation()}
         className={cn(
           "relative mx-auto w-full overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_30px_140px_-50px_var(--color-primary)]",
-          fullPresentationStyle ? "max-w-[1700px]" : "max-w-7xl",
+          premiumPresentationStyle ? "max-w-[1700px]" : "max-w-7xl",
         )}
       >
         <button
@@ -289,8 +289,8 @@ function ProjectModal({ project, onClose }: { project: PortfolioProject; onClose
           </div>
         </div>
 
-        <div className={cn("p-4 sm:p-6 lg:p-8", fullPresentationStyle && "bg-[radial-gradient(circle_at_top,rgba(192,34,39,0.08),transparent_26%)]") }>
-          {fullPresentationStyle ? (
+        <div className={cn("p-4 sm:p-6 lg:p-8", premiumPresentationStyle && "bg-[radial-gradient(circle_at_top,rgba(192,34,39,0.08),transparent_26%)]") }>
+          {premiumPresentationStyle ? (
             <div className="mx-auto flex max-w-[1520px] flex-col gap-6 lg:gap-8">
               {project.images.map((image, index) => (
                 <motion.figure
