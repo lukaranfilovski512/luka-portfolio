@@ -1,15 +1,12 @@
 export type PortfolioImage = { src: string; alt: string; w: number; h: number }
 
-export type PortfolioVideo = { src: string; poster: string; title: string; duration: string; w: number; h: number }
-
 export type PortfolioProject = {
   slug: string
   folder: string
   title: string
-  category: "Social Media" | "Branding" | "Logo Design" | "Posters" | "Video & Motion"
+  category: "Social Media" | "Branding" | "Logo Design" | "Posters"
   description: string
   images: PortfolioImage[]
-  videos?: PortfolioVideo[]
   count: number
 }
 
@@ -2039,13 +2036,11 @@ export const portfolioProjects = [
       },
       {
         "src": "/portfolio/sky-city-deluxe-logo-design/sky-city-deluxe-logo-design-05.heic",
-        "alt": "Sky City Deluxe visual 5",
         "w": 640,
         "h": 800
       },
       {
         "src": "/portfolio/sky-city-deluxe-logo-design/sky-city-deluxe-logo-design-06.heic",
-        "alt": "Sky City Deluxe visual 6",
         "w": 640,
         "h": 800
       }
@@ -2162,46 +2157,4 @@ export const portfolioProjects = [
     ],
     "count": 1
   }
-  ,
-  {
-    "slug": "battery-evolution-b2b-videos",
-    "folder": "battery-evolution-b2b-videos",
-    "title": "Battery Evolution B2B Videos",
-    "category": "Video & Motion",
-    "description": "Premium B2B video content for Battery Evolution, presented in a focused motion section with a cinematic viewing experience.",
-    "images": [
-      {
-        "src": "/portfolio/battery-evolution-b2b-videos/battery-evolution-b2b-01-poster.jpg",
-        "alt": "Battery Evolution B2B video preview 1",
-        "w": 640,
-        "h": 1138
-      },
-      {
-        "src": "/portfolio/battery-evolution-b2b-videos/battery-evolution-b2b-02-poster.jpg",
-        "alt": "Battery Evolution B2B video preview 2",
-        "w": 720,
-        "h": 1280
-      }
-    ],
-    "videos": [
-      {
-        "src": "/portfolio/battery-evolution-b2b-videos/battery-evolution-b2b-01.mp4",
-        "poster": "/portfolio/battery-evolution-b2b-videos/battery-evolution-b2b-01-poster.jpg",
-        "title": "Battery Evolution B2B Reel 01",
-        "duration": "00:42",
-        "w": 640,
-        "h": 1138
-      },
-      {
-        "src": "/portfolio/battery-evolution-b2b-videos/battery-evolution-b2b-02.mp4",
-        "poster": "/portfolio/battery-evolution-b2b-videos/battery-evolution-b2b-02-poster.jpg",
-        "title": "Battery Evolution B2B Reel 02",
-        "duration": "00:47",
-        "w": 720,
-        "h": 1280
-      }
-    ],
-    "count": 2
-  }
-
 ] satisfies PortfolioProject[]
