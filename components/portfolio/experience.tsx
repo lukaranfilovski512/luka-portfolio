@@ -63,7 +63,7 @@ export function Experience() {
                 Six years of building visual systems for real businesses.
               </h2>
               <p className="mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                Since 2021, my work has grown from freelance social media design into creative leadership,
+                Since 2020, my work has grown from freelance social media design into creative leadership,
                 marketing strategy, branding, and complete digital presentation for businesses.
               </p>
 
