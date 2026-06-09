@@ -37,7 +37,7 @@ const experience = [
   {
     role: "Freelance Graphic Designer",
     company: "By Karanfilovski",
-    period: "2021 — Present",
+    period: "2020 — Present",
     description: "Ongoing private freelance work covering logos, brand identity, social media visuals, print materials, and web banners.",
   },
 ]
