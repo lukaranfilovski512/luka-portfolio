@@ -1,32 +1,63 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Luka Karanfilovski — Brand, Campaign & Digital Design',
+  metadataBase: new URL('https://www.bykaranfilovski.com/'),
+  title: 'Luka Karanfilovski — Creative Lead & Marketing Strategist',
   description:
-    'Luka Karanfilovski is a multidisciplinary creative designer helping businesses build premium visual identities through branding, social media design, marketing campaigns, and modern UI/UX.',
-  generator: 'v0.app',
+    'Portfolio of Luka Karanfilovski, a graphic designer, brand designer and marketing creative from Skopje, North Macedonia, specializing in branding, social media design, packaging, advertising visuals, print materials and product-focused campaigns.',
   keywords: [
     'Luka Karanfilovski',
-    'graphic designer',
-    'branding',
-    'visual identity',
-    'social media design',
-    'marketing campaigns',
-    'UI/UX design',
-    'Skopje designer',
+    'By Karanfilovski',
+    'Creative Lead',
+    'Marketing Strategist',
+    'Graphic Designer',
+    'Brand Designer',
+    'Social Media Design',
+    'Packaging Design',
+    'Advertising Visuals',
+    'Print Design',
+    'Skopje North Macedonia',
   ],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Luka Karanfilovski — Brand, Campaign & Digital Design',
+    title: 'Luka Karanfilovski — Creative Lead & Marketing Strategist',
     description:
-      'Premium branding, social media, marketing campaigns and UI/UX design for businesses that want a stronger visual presence.',
+      'Portfolio of Luka Karanfilovski, a graphic designer, brand designer and marketing creative from Skopje, North Macedonia.',
     type: 'website',
+    url: 'https://www.bykaranfilovski.com/',
+    siteName: 'By Karanfilovski',
+    images: [
+      {
+        url: '/luka-hero.jpg',
+        width: 1200,
+        height: 1600,
+        alt: 'Luka Karanfilovski — By Karanfilovski portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luka Karanfilovski — Creative Lead & Marketing Strategist',
+    description:
+      'Branding, social media design, packaging, advertising visuals, print materials and product-focused campaigns.',
+    images: ['/luka-hero.jpg'],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo-red-mark.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
 }
 
-export const viewport = {
-  themeColor: '#0a0c10',
+export const viewport: Viewport = {
+  themeColor: '#050507',
 }
 
 export default function RootLayout({

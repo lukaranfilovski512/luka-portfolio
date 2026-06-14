@@ -1,1 +1,13 @@
-Portfolio projects replaced from Package.zip. Projects: 27. Files added: 313. HEIC files are kept as uploaded; they may depend on browser support.
+Portfolio update completed from the attached site-assets folder.
+
+Summary:
+- Synced website copy with Luka Karanfilovski 2026 CV.
+- Replaced public/portfolio with the final site-assets/portfolio projects only.
+- Generated portfolio data with verified image paths and real dimensions.
+- Featured project set to Orevce Cheese Packaging Design.
+- Header, hero and footer use horizontal-logo.png.
+- Removed visible /start-project CTAs and route.
+- Skipped HEIC files for browser/Vercel reliability.
+- npm run lint and npm run build pass.
+
+Final archive contains source code and public assets. node_modules and .next are intentionally excluded.
