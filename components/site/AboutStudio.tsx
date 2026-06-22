@@ -1,19 +1,15 @@
 "use client"
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import Image from "next/image"
+import { motion } from "framer-motion"
 import { EASE, VIEWPORT } from "@/lib/motion"
 import { about, education, identity, languages } from "@/lib/site-content"
 import { RevealText, SectionLabel } from "@/components/ui/RevealText"
 
 /** About — asymmetric editorial split with a masked, scan-lit portrait. */
 export function AboutStudio() {
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] })
-  const imgY = useTransform(scrollYProgress, [0, 1], [-30, 30])
-
   return (
-    <section id="about" ref={ref} className="relative scroll-mt-20 py-28 lg:py-40">
+    <section id="about" className="relative scroll-mt-20 py-28 lg:py-40">
       <div className="mx-auto max-w-[1480px] px-5 sm:px-8">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           {/* Masked portrait */}
@@ -24,11 +20,13 @@ export function AboutStudio() {
             transition={{ duration: 1.1, ease: EASE }}
             className="group relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[1.75rem] border border-white/[0.08] lg:max-w-none"
           >
-            <motion.img
+            <Image
               src="/luka-hero.jpg"
               alt={identity.name}
-              style={{ y: imgY }}
-              className="h-[112%] w-full scale-[1.06] object-cover object-[62%_center] [filter:grayscale(0.3)_brightness(0.85)] transition-[filter] duration-700 group-hover:[filter:grayscale(0)_brightness(0.95)]"
+              fill
+              quality={82}
+              sizes="(max-width: 768px) 92vw, (max-width: 1200px) 38vw, 520px"
+              className="object-cover object-[62%_center] [filter:grayscale(0.25)_brightness(0.88)] transition-[filter] duration-500 group-hover:[filter:grayscale(0)_brightness(0.95)]"
             />
             <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(6,6,8,0.65),transparent_45%)]" />
             {/* scan line */}

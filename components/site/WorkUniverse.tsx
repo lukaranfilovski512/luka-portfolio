@@ -1,31 +1,17 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
-import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion"
+import { useMemo, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import { EASE, VIEWPORT } from "@/lib/motion"
-import { categories, cover, mediaCount, projects, type Category, type Project } from "@/lib/portfolio-data"
+import { categories, mediaCount, projects, type Category } from "@/lib/portfolio-data"
 import { RevealText, SectionLabel } from "@/components/ui/RevealText"
 import { useCaseViewer } from "@/components/site/CaseViewer"
-import { SafeImage } from "@/components/ui/SafeImage"
 import { cn } from "@/lib/utils"
 
 export function WorkUniverse() {
   const [filter, setFilter] = useState<Category>("All")
-  const { open, activeSlug } = useCaseViewer()
-  const [preview, setPreview] = useState<Project | null>(null)
-  const [previewEnabled, setPreviewEnabled] = useState(false)
-
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-  const sx = useSpring(x, { stiffness: 260, damping: 26, mass: 0.45 })
-  const sy = useSpring(y, { stiffness: 260, damping: 26, mass: 0.45 })
-
-  useEffect(() => {
-    const fine = window.matchMedia("(pointer: fine) and (hover: hover)").matches
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    setPreviewEnabled(fine && !reduced)
-  }, [])
+  const { open } = useCaseViewer()
 
   const list = useMemo(
     () => (filter === "All" ? projects : projects.filter((p) => p.category === filter)),
@@ -43,7 +29,7 @@ export function WorkUniverse() {
     <section id="work" className="relative scroll-mt-20 py-28 lg:py-40">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-10 h-80 w-[42rem] -translate-x-1/2 rounded-full bg-[#c02528]/[0.05] blur-[140px]"
+        className="pointer-events-none absolute left-1/2 top-10 h-80 w-[42rem] -translate-x-1/2 rounded-full bg-[#c02528]/[0.05] blur-2xl opacity-70"
       />
 
       <div className="relative mx-auto max-w-[1480px] px-5 sm:px-8">
@@ -63,7 +49,7 @@ export function WorkUniverse() {
             className="max-w-sm text-pretty text-sm leading-relaxed text-[#a1a1aa]"
           >
             {projects.length} final client and concept projects across packaging, social media systems,
-            branding, logos, posters, sports design and campaign visuals. Hover to preview, open for the full case.
+            branding, logos, posters, sports design and campaign visuals. Open a project for the full case.
           </motion.p>
         </div>
 
@@ -108,18 +94,7 @@ export function WorkUniverse() {
         </motion.div>
 
         {/* Index list */}
-        <div
-          className="mt-12 border-t border-white/[0.07]"
-          onPointerMove={
-            previewEnabled
-              ? (e) => {
-                  x.set(e.clientX)
-                  y.set(e.clientY)
-                }
-              : undefined
-          }
-          onPointerLeave={previewEnabled ? () => setPreview(null) : undefined}
-        >
+        <div className="mt-12 border-t border-white/[0.07]">
           <AnimatePresence mode="popLayout">
             {list.map((project, i) => (
               <motion.div
@@ -133,7 +108,6 @@ export function WorkUniverse() {
                 <button
                   type="button"
                   onClick={() => open(project.slug)}
-                  onPointerEnter={() => previewEnabled && setPreview(project)}
                   className="group relative grid w-full grid-cols-[2.6rem_1fr_auto] items-center gap-4 border-b border-white/[0.07] py-6 text-left transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c02528]/60 sm:grid-cols-[3.5rem_1fr_auto_auto] sm:gap-8 sm:py-7"
                 >
                   {/* hover wash */}
@@ -174,46 +148,6 @@ export function WorkUniverse() {
         </div>
       </div>
 
-      {/* Cursor-following live preview */}
-      {previewEnabled && (
-        <AnimatePresence>
-          {preview && !activeSlug && (
-            <motion.div
-              key="work-preview"
-              initial={{ opacity: 0, scale: 0.72, rotate: -3 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              exit={{ opacity: 0, scale: 0.72, rotate: 3 }}
-              transition={{ duration: 0.3, ease: EASE }}
-              style={{ x: sx, y: sy }}
-              className="pointer-events-none fixed left-0 top-0 z-[65] hidden lg:block"
-            >
-              <div className="ml-7 mt-7 w-64 origin-top-left overflow-hidden rounded-xl border border-white/[0.12] bg-[#0a0a0d] shadow-[0_30px_90px_-30px_rgba(0,0,0,0.95)]">
-                <div className="relative h-44 bg-white/[0.03]">
-                  <motion.div
-                    key={preview.slug}
-                    initial={{ scale: 1.12 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.6, ease: EASE }}
-                    className="h-full w-full"
-                  >
-                    <SafeImage src={cover(preview)} alt="" className="h-full w-full" eager />
-                  </motion.div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
-                  <span className="absolute bottom-2.5 left-3 font-mono text-[9px] uppercase tracking-[0.22em] text-white/80">
-                    {preview.category}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between gap-3 px-3.5 py-2.5">
-                  <span className="truncate text-xs font-semibold text-white">{preview.title}</span>
-                  <span className="shrink-0 font-mono text-[9px] uppercase tracking-[0.2em] text-[#c02528]">
-                    Open
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      )}
 
     </section>
   )

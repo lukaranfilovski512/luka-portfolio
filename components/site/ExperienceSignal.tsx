@@ -1,7 +1,6 @@
 "use client"
 
-import { useRef } from "react"
-import { motion, useScroll, useSpring, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 import { EASE, VIEWPORT } from "@/lib/motion"
 import { experience } from "@/lib/site-content"
 import { RevealText, SectionLabel } from "@/components/ui/RevealText"
@@ -12,11 +11,6 @@ import { cn } from "@/lib/utils"
  * you scroll; stations alternate sides on desktop, stack on mobile.
  */
 export function ExperienceSignal() {
-  const trackRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({ target: trackRef, offset: ["start 75%", "end 60%"] })
-  const progress = useSpring(scrollYProgress, { stiffness: 90, damping: 26, mass: 0.5 })
-  const pulseY = useTransform(progress, [0, 1], ["0%", "100%"])
-
   return (
     <section id="experience" className="relative scroll-mt-20 py-28 lg:py-40">
       <div className="mx-auto max-w-[1480px] px-5 sm:px-8">
@@ -26,18 +20,16 @@ export function ExperienceSignal() {
           className="mt-7 text-4xl uppercase leading-[0.98] tracking-tight text-white sm:text-6xl"
         />
 
-        <div ref={trackRef} className="relative mx-auto mt-16 max-w-4xl">
+        <div className="relative mx-auto mt-16 max-w-4xl">
           {/* Center line + traveling pulse */}
           <div aria-hidden className="absolute inset-y-0 left-[11px] w-px bg-white/[0.08] lg:left-1/2" />
-          <motion.div
+          <div
             aria-hidden
-            style={{ scaleY: progress }}
-            className="absolute inset-y-0 left-[11px] w-px origin-top bg-gradient-to-b from-[#c02528] via-[#c02528] to-[#801316] lg:left-1/2"
+            className="absolute inset-y-0 left-[11px] w-px bg-gradient-to-b from-[#c02528] via-[#c02528]/70 to-[#801316]/60 lg:left-1/2"
           />
-          <motion.div
+          <div
             aria-hidden
-            style={{ top: pulseY }}
-            className="absolute left-[11px] z-10 -ml-[5px] -mt-[5px] hidden size-[11px] rounded-full bg-[#c02528] shadow-[0_0_24px_4px_rgba(192,37,40,0.55)] lg:left-1/2 lg:block"
+            className="absolute left-[11px] top-2 z-10 -ml-[5px] hidden size-[11px] rounded-full bg-[#c02528] shadow-[0_0_18px_2px_rgba(192,37,40,0.45)] lg:left-1/2 lg:block"
           />
 
           <div className="space-y-12 lg:space-y-20">

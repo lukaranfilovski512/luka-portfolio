@@ -176,20 +176,32 @@ export function ThreeCore({ className }: { className?: string }) {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const mobileLike = window.matchMedia("(max-width: 767px), (pointer: coarse), (hover: none)").matches
+    const nav = navigator as Navigator & { deviceMemory?: number; hardwareConcurrency?: number }
+    const lowThreads = typeof nav.hardwareConcurrency === "number" && nav.hardwareConcurrency <= 4
+    const lowMemory = typeof nav.deviceMemory === "number" && nav.deviceMemory <= 4
+
+    // Recruiter-safe performance mode: static fallback for mobile/reduced/low-power devices.
+    if (reduced || mobileLike || lowThreads || lowMemory) {
+      setFailed(true)
+      return
+    }
+
     const gl = canvas.getContext("webgl", {
       alpha: true,
-      antialias: true,
+      antialias: false,
       premultipliedAlpha: false,
-      powerPreference: "high-performance",
+      powerPreference: "low-power",
     })
     if (!gl) {
       setFailed(true)
       return
     }
 
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     const fine = window.matchMedia("(pointer: fine) and (hover: hover)").matches
-    const PARTICLES = fine ? 700 : 280
+    const PARTICLES = 260
 
     const make = (vsSrc: string, fsSrc: string) => {
       const compile = (type: number, src: string) => {
@@ -285,10 +297,10 @@ export function ThreeCore({ className }: { className?: string }) {
     let dpr = 1
     const start = performance.now()
     const mouse = { x: 0, y: 0, tx: 0, ty: 0 }
-    let scrollBoost = 0
+    const scrollBoost = 0
 
     const resize = () => {
-      dpr = Math.min(window.devicePixelRatio || 1, 1.5)
+      dpr = Math.min(window.devicePixelRatio || 1, 1.25)
       const w = Math.max(1, Math.round(canvas.clientWidth * dpr))
       const h = Math.max(1, Math.round(canvas.clientHeight * dpr))
       if (canvas.width !== w || canvas.height !== h) {
@@ -384,12 +396,6 @@ export function ThreeCore({ className }: { className?: string }) {
     }
     if (fine && !reduced) window.addEventListener("pointermove", onMove, { passive: true })
 
-    const onScroll = () => {
-      const h = Math.max(1, window.innerHeight)
-      scrollBoost = Math.min(1, window.scrollY / h)
-    }
-    window.addEventListener("scroll", onScroll, { passive: true })
-
     const io = new IntersectionObserver(
       ([entry]) => {
         inView = entry.isIntersecting
@@ -406,7 +412,6 @@ export function ThreeCore({ className }: { className?: string }) {
       pause()
       io.disconnect()
       document.removeEventListener("visibilitychange", onVis)
-      window.removeEventListener("scroll", onScroll)
       if (fine && !reduced) window.removeEventListener("pointermove", onMove)
       gl.deleteBuffer(icoBuf)
       gl.deleteBuffer(seedBuf)
@@ -419,11 +424,11 @@ export function ThreeCore({ className }: { className?: string }) {
   }, [])
 
   if (failed) {
-    // Graceful fallback: a static red aura keeps the composition alive.
+    // Graceful fallback: static, no WebGL, no requestAnimationFrame.
     return (
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(192,37,40,0.16),transparent_55%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(192,37,40,0.14),transparent_58%)]"
       />
     )
   }

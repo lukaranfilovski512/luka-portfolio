@@ -11,8 +11,7 @@ import { SkillsDock } from "@/components/site/SkillsDock"
 import { AboutStudio } from "@/components/site/AboutStudio"
 import { ContactCTA } from "@/components/site/ContactCTA"
 import { Footer } from "@/components/site/Footer"
-import { SmoothScroll } from "@/components/ui/SmoothScroll"
-import { CursorAura, NoiseOverlay, PageRestore, ScrollProgress } from "@/components/ui/Overlays"
+import { PageRestore, ScrollProgress } from "@/components/ui/Overlays"
 
 export default function Page() {
   return (
@@ -20,10 +19,7 @@ export default function Page() {
       <CaseViewerProvider>
         <div className="relative min-h-screen overflow-x-hidden bg-[#060608]">
           <PageRestore />
-          <SmoothScroll />
-          <NoiseOverlay />
           <ScrollProgress />
-          <CursorAura />
           <Header />
           <main>
             <Hero />

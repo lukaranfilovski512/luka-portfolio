@@ -72,7 +72,7 @@ export function ProjectModal({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[70] bg-[#060608]/92 backdrop-blur-xl"
+      className="fixed inset-0 z-[70] bg-[#060608]/92"
       onClick={onClose}
     >
       {/* Fixed controls — outside the transformed panel */}
@@ -81,7 +81,7 @@ export function ProjectModal({
         type="button"
         onClick={onClose}
         aria-label="Close project"
-        className="fixed right-4 top-4 z-[78] flex size-11 items-center justify-center rounded-full border border-white/[0.12] bg-[#060608]/85 text-white backdrop-blur transition-colors hover:border-[#c02528] hover:bg-[#c02528] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c02528]/70 sm:right-7 sm:top-7"
+        className="fixed right-4 top-4 z-[78] flex size-11 items-center justify-center rounded-full border border-white/[0.12] bg-[#060608]/85 text-white transition-colors hover:border-[#c02528] hover:bg-[#c02528] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c02528]/70 sm:right-7 sm:top-7"
       >
         <X className="size-4" />
       </button>
@@ -93,7 +93,7 @@ export function ProjectModal({
             onPrev()
           }}
           aria-label="Previous project"
-          className="flex size-11 items-center justify-center rounded-full border border-white/[0.12] bg-[#060608]/85 text-white backdrop-blur transition-colors hover:border-[#c02528] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c02528]/70"
+          className="flex size-11 items-center justify-center rounded-full border border-white/[0.12] bg-[#060608]/85 text-white transition-colors hover:border-[#c02528] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c02528]/70"
         >
           <ArrowLeft className="size-4" />
         </button>
@@ -104,7 +104,7 @@ export function ProjectModal({
             onNext()
           }}
           aria-label="Next project"
-          className="flex size-11 items-center justify-center rounded-full border border-white/[0.12] bg-[#060608]/85 text-white backdrop-blur transition-colors hover:border-[#c02528] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c02528]/70"
+          className="flex size-11 items-center justify-center rounded-full border border-white/[0.12] bg-[#060608]/85 text-white transition-colors hover:border-[#c02528] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c02528]/70"
         >
           <ArrowRight className="size-4" />
         </button>
@@ -126,7 +126,7 @@ export function ProjectModal({
         <header className="relative border-b border-white/[0.07] px-5 pb-8 pt-20 sm:px-10 sm:pt-24 lg:px-16">
           <div
             aria-hidden
-            className="pointer-events-none absolute right-0 top-0 h-56 w-72 rounded-full bg-[#c02528]/10 blur-[100px]"
+            className="pointer-events-none absolute right-0 top-0 h-56 w-72 rounded-full bg-[#c02528]/10 blur-xl opacity-60"
           />
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#c02528]">
             {project.category} · {project.client} · {project.year}

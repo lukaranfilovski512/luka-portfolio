@@ -1,14 +1,12 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
 
 /**
- * Production-safe local image renderer.
- *
- * Valid images are rendered immediately instead of being hidden behind a
- * load-state skeleton. This avoids the cached/mobile onLoad edge case that was
- * leaving Featured Case image cards black even though the files existed.
+ * Production-safe optimized image renderer.
+ * Uses next/image for responsive compression, lazy loading and stable layout.
  */
 export function SafeImage({
   src,
@@ -18,6 +16,7 @@ export function SafeImage({
   className,
   imgClassName,
   eager = false,
+  sizes = "(max-width: 768px) 92vw, (max-width: 1200px) 50vw, 720px",
 }: {
   src: string
   alt: string
@@ -26,6 +25,7 @@ export function SafeImage({
   className?: string
   imgClassName?: string
   eager?: boolean
+  sizes?: string
 }) {
   const [failed, setFailed] = useState(false)
 
@@ -36,17 +36,32 @@ export function SafeImage({
       className={cn("relative overflow-hidden bg-white/[0.03]", className)}
       style={w && h ? { aspectRatio: `${w} / ${h}` } : undefined}
     >
-      <img
-        src={src}
-        alt={alt}
-        width={w}
-        height={h}
-        loading={eager ? "eager" : "lazy"}
-        decoding="async"
-        fetchPriority={eager ? "high" : "auto"}
-        onError={() => setFailed(true)}
-        className={cn("block h-full w-full object-cover", imgClassName)}
-      />
+      {w && h ? (
+        <Image
+          src={src}
+          alt={alt}
+          width={w}
+          height={h}
+          quality={82}
+          priority={eager}
+          loading={eager ? undefined : "lazy"}
+          sizes={sizes}
+          onError={() => setFailed(true)}
+          className={cn("block h-full w-full object-cover", imgClassName)}
+        />
+      ) : (
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          quality={82}
+          priority={eager}
+          loading={eager ? undefined : "lazy"}
+          sizes={sizes}
+          onError={() => setFailed(true)}
+          className={cn("object-cover", imgClassName)}
+        />
+      )}
     </div>
   )
 }

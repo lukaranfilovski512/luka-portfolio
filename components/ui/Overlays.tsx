@@ -1,19 +1,18 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { motion, useMotionValue, useScroll, useSpring } from "framer-motion"
+import { useEffect } from "react"
+import { motion, useScroll, useSpring } from "framer-motion"
 
-/** Animated film-grain overlay (two-frame shift, GPU-cheap). */
+/**
+ * NoiseOverlay intentionally renders nothing in production.
+ * A fixed animated grain layer looked premium but added full-screen repaint work
+ * during scroll on some browsers/devices.
+ */
 export function NoiseOverlay() {
-  return (
-    <div
-      aria-hidden
-      className="noise-overlay pointer-events-none fixed inset-0 z-[60] animate-[grain_900ms_steps(2)_infinite] opacity-[0.04] mix-blend-overlay"
-    />
-  )
+  return null
 }
 
-/** Top scroll progress hairline. */
+/** Top scroll progress hairline — transform-only, no layout-triggering width changes. */
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 28, mass: 0.4 })
@@ -26,38 +25,15 @@ export function ScrollProgress() {
   )
 }
 
-/** Soft red aura trailing the cursor (desktop only). */
+/**
+ * CursorAura intentionally renders nothing in production.
+ * The old 600px fixed cursor-following gradient caused high-frequency repaint work.
+ */
 export function CursorAura() {
-  const [enabled, setEnabled] = useState(false)
-  const x = useMotionValue(-500)
-  const y = useMotionValue(-500)
-  const sx = useSpring(x, { stiffness: 90, damping: 22, mass: 0.6 })
-  const sy = useSpring(y, { stiffness: 90, damping: 22, mass: 0.6 })
-
-  useEffect(() => {
-    const fine = window.matchMedia("(pointer: fine) and (hover: hover)").matches
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (!fine || reduced) return
-    setEnabled(true)
-    const onMove = (e: PointerEvent) => {
-      x.set(e.clientX - 300)
-      y.set(e.clientY - 300)
-    }
-    window.addEventListener("pointermove", onMove, { passive: true })
-    return () => window.removeEventListener("pointermove", onMove)
-  }, [x, y])
-
-  if (!enabled) return null
-  return (
-    <motion.div
-      aria-hidden
-      style={{ x: sx, y: sy }}
-      className="pointer-events-none fixed left-0 top-0 z-[1] size-[600px] rounded-full bg-[radial-gradient(circle,rgba(192,37,40,0.065)_0%,rgba(192,37,40,0.02)_45%,transparent_68%)]"
-    />
-  )
+  return null
 }
 
-/** Restores scroll to top on reload for a clean intro. */
+/** Restores scroll to top on reload for a clean first view. */
 export function PageRestore() {
   useEffect(() => {
     if ("scrollRestoration" in history) history.scrollRestoration = "manual"

@@ -12,7 +12,7 @@ export function CertificationSpotlight() {
     <section id="certification" className="relative scroll-mt-24 py-28 lg:py-36">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[28rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c02528]/[0.08] blur-[150px]"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[28rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c02528]/[0.08] blur-2xl opacity-70"
       />
 
       <div className="relative mx-auto max-w-[1480px] px-5 sm:px-8">

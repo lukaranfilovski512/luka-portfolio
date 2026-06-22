@@ -62,12 +62,12 @@ export function ContactCTA() {
     <section id="contact" className="relative scroll-mt-24 overflow-hidden py-28 lg:py-40">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[34rem] w-[52rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c02528]/[0.09] blur-[160px]"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[34rem] w-[52rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c02528]/[0.09] blur-2xl opacity-70"
       />
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.1] to-transparent" />
 
       <div className="relative mx-auto max-w-[1480px] px-5 sm:px-8">
-        <div className="overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-6 shadow-[0_30px_120px_-70px_rgba(0,0,0,0.95)] backdrop-blur-xl sm:p-8 lg:p-10">
+        <div className="overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-6 shadow-[0_30px_120px_-70px_rgba(0,0,0,0.95)] sm:p-8 lg:p-10">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div>
               <SectionLabel index="08">{contact.label}</SectionLabel>
@@ -102,7 +102,7 @@ export function ContactCTA() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Open Gmail compose for ${identity.email}`}
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.02] px-8 py-4 text-sm font-semibold text-white backdrop-blur transition-colors duration-300 hover:border-[#c02528]/60 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.02] px-8 py-4 text-sm font-semibold text-white transition-colors duration-300 hover:border-[#c02528]/60 sm:w-auto"
                 >
                   <ExternalLink className="size-4" />
                   Open Gmail
@@ -112,7 +112,7 @@ export function ContactCTA() {
                 <button
                   type="button"
                   onClick={copyEmail}
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.02] px-8 py-4 text-sm font-semibold text-white backdrop-blur transition-colors duration-300 hover:border-[#c02528]/60 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.02] px-8 py-4 text-sm font-semibold text-white transition-colors duration-300 hover:border-[#c02528]/60 sm:w-auto"
                 >
                   {copied ? <Check className="size-4 text-[#c02528]" /> : <Copy className="size-4" />}
                   {copied ? "Email copied" : "Copy Email"}

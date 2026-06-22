@@ -46,7 +46,7 @@ export function SkillsDock() {
               {/* dock reflection */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute -bottom-8 left-6 h-10 w-14 rounded-xl bg-gradient-to-b from-white/[0.05] to-transparent blur-sm sm:w-16"
+                className="pointer-events-none absolute -bottom-8 left-6 h-10 w-14 rounded-xl bg-gradient-to-b from-white/[0.05] to-transparent  sm:w-16"
               />
             </motion.div>
           ))}

@@ -23,11 +23,11 @@ export function FeaturedCase() {
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c02528]/50 to-transparent" />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 top-1/4 h-[28rem] w-[28rem] rounded-full bg-[#c02528]/[0.07] blur-[150px]"
+        className="pointer-events-none absolute -right-40 top-1/4 h-[28rem] w-[28rem] rounded-full bg-[#c02528]/[0.07] blur-2xl opacity-70"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute left-0 top-1/3 h-[22rem] w-[22rem] rounded-full bg-white/[0.035] blur-[120px]"
+        className="pointer-events-none absolute left-0 top-1/3 h-[22rem] w-[22rem] rounded-full bg-white/[0.035] blur-xl opacity-60"
       />
 
       <div className="relative mx-auto max-w-[1480px] px-5 sm:px-8">

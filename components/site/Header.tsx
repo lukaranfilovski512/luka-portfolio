@@ -75,8 +75,8 @@ export function Header() {
           className={cn(
             "mx-auto flex max-w-[1480px] items-center justify-between gap-5 px-5 py-3 transition-all duration-500 sm:px-8 lg:py-3.5",
             scrolled
-              ? "border-b border-white/[0.07] bg-[#060608]/78 shadow-[0_18px_70px_-45px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
-              : "border-b border-white/[0.03] bg-[#060608]/25 backdrop-blur-sm",
+              ? "border-b border-white/[0.07] bg-[#060608]/94 shadow-[0_14px_45px_-34px_rgba(0,0,0,0.9)]"
+              : "border-b border-white/[0.03] bg-[#060608]/76",
           )}
         >
           <a
@@ -93,7 +93,7 @@ export function Header() {
           </a>
 
           <nav className="flex items-center gap-3" aria-label="Primary navigation">
-            <ul className="hidden items-center gap-1 rounded-full border border-white/[0.07] bg-white/[0.025] p-1.5 backdrop-blur-xl lg:flex">
+            <ul className="hidden items-center gap-1 rounded-full border border-white/[0.07] bg-white/[0.025] p-1.5 lg:flex">
               {links.map((l) => (
                 <li key={l.id}>
                   <a
@@ -125,7 +125,7 @@ export function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
-              className="flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white backdrop-blur lg:hidden"
+              className="flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white lg:hidden"
             >
               {open ? <X className="size-4" /> : <Menu className="size-4" />}
             </button>
@@ -141,7 +141,7 @@ export function Header() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.55, ease: EASE }}
-            className="fixed inset-y-0 right-0 z-40 flex w-full max-w-sm flex-col border-l border-white/[0.07] bg-[#060608]/97 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-y-0 right-0 z-40 flex w-full max-w-sm flex-col border-l border-white/[0.07] bg-[#060608] lg:hidden"
           >
             <div className="flex-1 px-8 pt-28">
               <img src="/horizontal-logo.png" alt="By Karanfilovski" className="h-9 w-auto max-w-[240px] object-contain" />
