@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'By Karanfilovski',
     images: [
       {
-        url: '/luka-hero.jpg',
+        url: '/luka-hero-premium.webp',
         width: 1200,
         height: 1600,
         alt: 'Luka Karanfilovski — By Karanfilovski portfolio',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'Luka Karanfilovski — Creative Lead & Marketing Strategist',
     description:
       'Branding, social media design, packaging, advertising visuals, print materials and product-focused campaigns.',
-    images: ['/luka-hero.jpg'],
+    images: ['/luka-hero-premium.webp'],
   },
   icons: {
     icon: [

@@ -21,21 +21,14 @@ export function AboutStudio() {
             className="group relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[1.75rem] border border-white/[0.08] lg:max-w-none"
           >
             <Image
-              src="/luka-hero.jpg"
+              src="/luka-about-premium.webp"
               alt={identity.name}
               fill
-              quality={82}
+              quality={100}
               sizes="(max-width: 768px) 92vw, (max-width: 1200px) 38vw, 520px"
-              className="object-cover object-[62%_center] [filter:grayscale(0.25)_brightness(0.88)] transition-[filter] duration-500 group-hover:[filter:grayscale(0)_brightness(0.95)]"
+              className="object-cover object-center"
             />
-            <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(6,6,8,0.65),transparent_45%)]" />
-            {/* scan line */}
-            <motion.div
-              aria-hidden
-              animate={{ y: ["-10%", "110%"] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-transparent via-[#c02528]/[0.12] to-transparent"
-            />
+            <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(6,6,8,0.34),transparent_42%)]" />
             <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
               <div>
                 <p className="font-display text-lg text-white">{identity.name}</p>

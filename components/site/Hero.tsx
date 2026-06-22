@@ -122,13 +122,13 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-[2rem] border border-white/[0.10] bg-white/[0.035] shadow-[0_30px_100px_-50px_rgba(0,0,0,0.95)]">
               <div className="relative aspect-[16/11] w-full overflow-hidden rounded-[1.85rem]">
                 <Image
-                  src="/luka-hero.jpg"
+                  src="/luka-hero-premium.webp"
                   alt="Luka Karanfilovski"
                   fill
                   priority
-                  quality={95}
+                  quality={100}
                   sizes="(max-width: 768px) 92vw, (max-width: 1200px) 46vw, 590px"
-                  className="object-cover object-[66%_center]"
+                  className="object-cover object-center"
                 />
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[#060608]/35 via-transparent to-[#060608]/5" />
                 <div aria-hidden className="absolute inset-0 ring-1 ring-inset ring-white/[0.08]" />
