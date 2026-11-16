@@ -1,40 +1,16 @@
-import { IntroGate } from "@/components/site/Intro"
-import { CaseViewerProvider } from "@/components/site/CaseViewer"
-import { Header } from "@/components/site/Header"
-import { Hero } from "@/components/site/Hero"
-import { Signal } from "@/components/site/Signal"
-import { FeaturedCase } from "@/components/site/FeaturedCase"
-import { WorkUniverse } from "@/components/site/WorkUniverse"
-import { ExperienceSignal } from "@/components/site/ExperienceSignal"
-import { CertificationSpotlight } from "@/components/site/CertificationSpotlight"
-import { SkillsDock } from "@/components/site/SkillsDock"
-import { AboutStudio } from "@/components/site/AboutStudio"
-import { ContactCTA } from "@/components/site/ContactCTA"
-import { Footer } from "@/components/site/Footer"
-import { PageRestore, ScrollProgress } from "@/components/ui/Overlays"
+import Image from 'next/image'
+import Link from 'next/link'
+import { Arrow, Gallery } from '@/components/Interactive'
+import { ContactBand, ProjectCard, SectionTitle } from '@/components/Portfolio'
+import { featuredProjects, getProject, marks } from '@/lib/projects'
 
-export default function Page() {
-  return (
-    <IntroGate>
-      <CaseViewerProvider>
-        <div className="relative min-h-screen overflow-x-hidden bg-[#060608]">
-          <PageRestore />
-          <ScrollProgress />
-          <Header />
-          <main>
-            <Hero />
-            <Signal />
-            <FeaturedCase />
-            <WorkUniverse />
-            <ExperienceSignal />
-            <CertificationSpotlight />
-            <SkillsDock />
-            <AboutStudio />
-            <ContactCTA />
-          </main>
-          <Footer />
-        </div>
-      </CaseViewerProvider>
-    </IntroGate>
-  )
+export default function Home() {
+  return <>
+    <section className="home-hero wrap"><div className="hero-topline"><span>Independent brand & visual designer</span><span>Skopje, North Macedonia</span></div><div className="hero-main"><h1>Good design.<br /><span>Clear intent.</span></h1><div className="hero-introduction"><span className="small-label">Luka Karanfilovski</span><p>I build visual identities, packaging and campaigns that hold together across the bigger picture.</p><Link href="/about" className="underlined-link">A little about my practice <Arrow diagonal /></Link></div></div><div className="hero-bottom"><span>Selected work / 2020—2026</span><a href="#work">Explore the work <Arrow /></a></div></section>
+    <section className="work-section wrap" id="work" aria-label="Selected case studies"><ProjectCard project={featuredProjects[0]} featured /><div className="project-grid">{featuredProjects.slice(1).map(project => <ProjectCard key={project.slug} project={project} />)}</div><div className="work-endnote"><span>Different industries. A considered approach to each.</span><span>01 — 05</span></div></section>
+    <section className="marks-section wrap" id="marks"><SectionTitle number="02" label="Selected marks" title="An idea, distilled." text="A concise selection of marks and wordmarks, built to be recognised." /><div className="marks-grid">{marks.map(mark => <article className="mark-card" key={mark.name}><Gallery images={mark.images} layout="two" /><div className="mark-copy"><h3>{mark.name}</h3><p>{mark.description}</p><span>Logo & wordmark design</span></div></article>)}</div></section>
+    <section className="additional-section wrap"><div><div className="eyebrow">A little more from the practice</div><h2>Different briefs.<br />The same attention.</h2><p>A supporting selection of digital campaigns and commercial visual work.</p></div><Link href="/work/mowo" className="additional-work"><span className="additional-number">06 / DIGITAL CAMPAIGNS</span><h3>MoWo</h3><p>{getProject('mowo')!.cardDescription}</p><Arrow diagonal /><div className="additional-images"><Image src="/projects/mowo/07.webp" alt="MoWo blue and magenta phone trade-in visual" width={1080} height={1350} sizes="(max-width: 650px) 40vw, 20vw" /><Image src="/projects/mowo/12.webp" alt="MoWo product campaign in a travel setting" width={1080} height={1350} sizes="(max-width: 650px) 40vw, 20vw" /></div></Link></section>
+    <section className="about-preview wrap"><div className="about-preview-portrait"><Image unoptimized src="/luka-hero.jpg" alt="Luka Karanfilovski" width={2048} height={849} sizes="(max-width: 650px) 90vw, 33vw" /></div><div><div className="eyebrow">The person behind the practice</div><h2>Curiosity first.<br />Care in the details.</h2><p>I’m Luka, an independent designer working across brand, campaign and digital communication. I like finding the idea that connects the parts, then giving each part the attention it needs.</p><Link href="/about" className="underlined-link">More about Luka <Arrow diagonal /></Link></div></section>
+    <ContactBand />
+  </>
 }

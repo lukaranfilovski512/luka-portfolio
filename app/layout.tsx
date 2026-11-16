@@ -1,76 +1,22 @@
 import type { Metadata, Viewport } from 'next'
+import { Header } from '@/components/Interactive'
+import { Footer } from '@/components/Portfolio'
+import { site } from '@/lib/site'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.bykaranfilovski.com/'),
-  title: 'Luka Karanfilovski — Creative Lead & Marketing Strategist',
-  description:
-    'Portfolio of Luka Karanfilovski, a graphic designer, brand designer and marketing creative from Skopje, North Macedonia, specializing in branding, social media design, packaging, advertising visuals, print materials and product-focused campaigns.',
-  keywords: [
-    'Luka Karanfilovski',
-    'By Karanfilovski',
-    'Creative Lead',
-    'Marketing Strategist',
-    'Graphic Designer',
-    'Brand Designer',
-    'Social Media Design',
-    'Packaging Design',
-    'Advertising Visuals',
-    'Print Design',
-    'Skopje North Macedonia',
-  ],
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Luka Karanfilovski — Creative Lead & Marketing Strategist',
-    description:
-      'Portfolio of Luka Karanfilovski, a graphic designer, brand designer and marketing creative from Skopje, North Macedonia.',
-    type: 'website',
-    url: 'https://www.bykaranfilovski.com/',
-    siteName: 'By Karanfilovski',
-    images: [
-      {
-        url: '/luka-hero-premium.webp',
-        width: 1200,
-        height: 1600,
-        alt: 'Luka Karanfilovski — By Karanfilovski portfolio',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Luka Karanfilovski — Creative Lead & Marketing Strategist',
-    description:
-      'Branding, social media design, packaging, advertising visuals, print materials and product-focused campaigns.',
-    images: ['/luka-hero-premium.webp'],
-  },
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/logo-red-mark.png', type: 'image/png' },
-    ],
-    shortcut: '/favicon.ico',
-    apple: '/apple-icon.png',
-  },
+  metadataBase: new URL(site.url),
+  title: { default: 'Luka Karanfilovski — Brand & Visual Designer', template: '%s — By Karanfilovski' },
+  description: 'Independent brand and visual designer based in Skopje. Selected work in identity, packaging, art direction, campaigns and digital communication.',
+  alternates: { canonical: '/' },
+  openGraph: { title: 'Luka Karanfilovski — Brand & Visual Designer', description: 'Considered identities, packaging, campaigns and digital communication. Explore selected case studies.', url: site.url, siteName: site.brand, type: 'website', locale: 'en_GB', images: [{ url: '/opengraph-image', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image' },
+  icons: { icon: '/favicon.ico', apple: '/apple-icon.png' },
 }
+export const viewport: Viewport = { themeColor: '#f5f3ee', width: 'device-width', initialScale: 1 }
 
-export const viewport: Viewport = {
-  themeColor: '#050507',
-}
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en" className="dark">
-      <body className="bg-background font-sans antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
-    </html>
-  )
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const jsonLd = { '@context': 'https://schema.org', '@type': 'Person', name: site.name, url: site.url, jobTitle: 'Brand & Visual Designer', address: { '@type': 'PostalAddress', addressLocality: 'Skopje', addressCountry: 'MK' }, sameAs: [site.linkedin, site.instagram], knowsAbout: ['Brand design', 'Packaging', 'Visual communication', 'Art direction', 'Campaign design'] }
+  return <html lang="en" data-scroll-behavior="smooth"><body><a className="skip-link" href="#main">Skip to content</a><div id="top" /><Header /><main id="main">{children}</main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />{process.env.NODE_ENV === 'production' && <Analytics />}</body></html>
 }

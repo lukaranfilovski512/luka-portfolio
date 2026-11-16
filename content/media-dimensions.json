@@ -1,0 +1,706 @@
+{
+  "/luka-about-premium.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "/horizontal-logo.png": {
+    "width": 2048,
+    "height": 537
+  },
+  "/apple-icon.png": {
+    "width": 180,
+    "height": 180
+  },
+  "/skala-graphic-design-diploma.jpg": {
+    "width": 1481,
+    "height": 1061
+  },
+  "/luka-hero.jpg": {
+    "width": 2048,
+    "height": 849
+  },
+  "/logo-red-mark.png": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/mono-alex/15.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/03.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/06.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/20.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/10.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/18.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/02.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/04.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/19.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/09.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/14.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/13.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/17.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/22.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/01.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/16.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/07.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/11.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/05.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/21.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/08.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/12.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mono-alex/23.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/15.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/03.webp": {
+    "width": 898,
+    "height": 897
+  },
+  "/projects/merkur/06.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/20.webp": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/merkur/10.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/18.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/02.webp": {
+    "width": 897,
+    "height": 896
+  },
+  "/projects/merkur/04.webp": {
+    "width": 897,
+    "height": 894
+  },
+  "/projects/merkur/19.webp": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/merkur/09.webp": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/merkur/13.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/17.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/01.webp": {
+    "width": 716,
+    "height": 897
+  },
+  "/projects/merkur/16.webp": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/merkur/07.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/11.webp": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/merkur/05.webp": {
+    "width": 717,
+    "height": 896
+  },
+  "/projects/merkur/21.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/merkur/08.webp": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/merkur/12.webp": {
+    "width": 1080,
+    "height": 1080
+  },
+  "/projects/cisto-skopje/03.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/cisto-skopje/02.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/cisto-skopje/04.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/cisto-skopje/01.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/15.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/03.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/06.webp": {
+    "width": 1082,
+    "height": 1350
+  },
+  "/projects/battery-evolution/20.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/10.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/25.webp": {
+    "width": 1369,
+    "height": 1149
+  },
+  "/projects/battery-evolution/18.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/02.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/04.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/19.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/09.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/14.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/13.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/17.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/22.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/01.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/16.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/07.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/24.webp": {
+    "width": 1077,
+    "height": 1350
+  },
+  "/projects/battery-evolution/11.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/05.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/21.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/08.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/12.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/battery-evolution/23.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/mowo/15.webp": {
+    "width": 714,
+    "height": 895
+  },
+  "/projects/mowo/03.webp": {
+    "width": 713,
+    "height": 895
+  },
+  "/projects/mowo/06.webp": {
+    "width": 716,
+    "height": 895
+  },
+  "/projects/mowo/10.webp": {
+    "width": 714,
+    "height": 895
+  },
+  "/projects/mowo/02.webp": {
+    "width": 714,
+    "height": 897
+  },
+  "/projects/mowo/04.webp": {
+    "width": 716,
+    "height": 897
+  },
+  "/projects/mowo/09.webp": {
+    "width": 713,
+    "height": 893
+  },
+  "/projects/mowo/14.webp": {
+    "width": 715,
+    "height": 896
+  },
+  "/projects/mowo/13.webp": {
+    "width": 717,
+    "height": 895
+  },
+  "/projects/mowo/01.webp": {
+    "width": 717,
+    "height": 896
+  },
+  "/projects/mowo/16.webp": {
+    "width": 768,
+    "height": 960
+  },
+  "/projects/mowo/07.webp": {
+    "width": 715,
+    "height": 893
+  },
+  "/projects/mowo/11.webp": {
+    "width": 716,
+    "height": 895
+  },
+  "/projects/mowo/05.webp": {
+    "width": 717,
+    "height": 895
+  },
+  "/projects/mowo/08.webp": {
+    "width": 714,
+    "height": 894
+  },
+  "/projects/mowo/12.webp": {
+    "width": 717,
+    "height": 892
+  },
+  "/projects/moto-kapitol/03.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/moto-kapitol/02.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/moto-kapitol/04.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/moto-kapitol/01.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/metalurg/DeoyULEse2C.webp": {
+    "width": 1376,
+    "height": 1072
+  },
+  "/projects/metalurg/De6md7CMNv2.webp": {
+    "width": 1440,
+    "height": 1851
+  },
+  "/projects/metalurg/DfkOkR5spL9.webp": {
+    "width": 1088,
+    "height": 1344
+  },
+  "/projects/metalurg/DfemR6fsOSL.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/metalurg/De6URSjs7ti.webp": {
+    "width": 1440,
+    "height": 1799
+  },
+  "/projects/metalurg/DfM5dlUs72i.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/metalurg/Dfw8t5gM7WM.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/metalurg/DfcX4Z8DM9O.webp": {
+    "width": 1600,
+    "height": 1065
+  },
+  "/projects/metalurg/DfuNTd8s7-L.webp": {
+    "width": 1440,
+    "height": 1799
+  },
+  "/projects/metalurg/DfiDnuaMq-e.webp": {
+    "width": 720,
+    "height": 1280
+  },
+  "/projects/metalurg/DffKprcM4ir.webp": {
+    "width": 1600,
+    "height": 1200
+  },
+  "/projects/metalurg/Deywfy1sqed.webp": {
+    "width": 1200,
+    "height": 1504
+  },
+  "/projects/metalurg/DfMw3ipMlQh.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/metalurg/Dfk4aNqsBFQ.webp": {
+    "width": 720,
+    "height": 1280
+  },
+  "/projects/metalurg/DfZUAbzMyHY.webp": {
+    "width": 1088,
+    "height": 1344
+  },
+  "/projects/metalurg/DfNZOAcsdDm.webp": {
+    "width": 640,
+    "height": 1136
+  },
+  "/projects/metalurg/DfEoXtQs8O9.webp": {
+    "width": 1088,
+    "height": 1344
+  },
+  "/projects/metalurg/Dfewy21sV5l.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/metalurg/DfPWh-lMPlC.webp": {
+    "width": 1088,
+    "height": 1344
+  },
+  "/projects/metalurg/DeowFfDMrxP.webp": {
+    "width": 1120,
+    "height": 1408
+  },
+  "/projects/metalurg/DfMj6jBs20k.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/metalurg/DfwsT6bsDGj.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/metalurg/Dfe4RLjMhal.webp": {
+    "width": 1136,
+    "height": 1408
+  },
+  "/projects/solar-energy/03.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/solar-energy/06.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/solar-energy/02.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/solar-energy/04.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/solar-energy/01.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/solar-energy/05.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/sky-city/03.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/sky-city/02.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/sky-city/04.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/sky-city/01.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/03.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/06.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/10.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/02.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/04.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/09.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/01.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/07.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/11.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/05.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/08.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/orevce/12.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/projects/akumulatorimk/15.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/03.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/06.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/10.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/18.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/02.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/04.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/09.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/14.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/13.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/17.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/01.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/16.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/07.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/11.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/05.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/08.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/akumulatorimk/12.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/15.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/03.webp": {
+    "width": 1206,
+    "height": 1507
+  },
+  "/projects/exide/06.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/10.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/02.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/04.webp": {
+    "width": 972,
+    "height": 1215
+  },
+  "/projects/exide/09.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/14.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/13.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/01.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/07.webp": {
+    "width": 512,
+    "height": 640
+  },
+  "/projects/exide/11.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/05.webp": {
+    "width": 1080,
+    "height": 1350
+  },
+  "/projects/exide/08.webp": {
+    "width": 512,
+    "height": 640
+  },
+  "/projects/exide/12.webp": {
+    "width": 1080,
+    "height": 1350
+  }
+}
